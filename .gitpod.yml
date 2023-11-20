@@ -1,0 +1,32 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Install dependencies
+    command: |
+      # Install backend dependencies
+      cd backend
+      npm install
+
+      # Install frontend dependencies
+      cd ../frontend
+      npm install
+
+  - name: Start backend
+    command: |
+      # Start the backend server
+      cd backend
+      npm start
+
+
+
+  - name: Start frontend
+    command: |
+      # Start the frontend development server
+      cd frontend
+      npm start
+
+
+# tasks:
+#   - init: npm install && npm run build
+#     command: npm run start
