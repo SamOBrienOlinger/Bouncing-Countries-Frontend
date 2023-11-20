@@ -1,29 +1,19 @@
-image:
-  file: .gitpod.Dockerfile
-
 tasks:
   - name: Install dependencies
     command: |
-      # Install backend dependencies
-      cd backend
+      cd bouncing-countries-backend
       npm install
-
-      # Install frontend dependencies
-      cd ../frontend
+      cd ../bouncing-countries-frontend
       npm install
 
   - name: Start backend
     command: |
-      # Start the backend server
-      cd backend
+      cd bouncing-countries-backend
       npm start
-
-
 
   - name: Start frontend
     command: |
-      # Start the frontend development server
-      cd frontend
+      cd bouncing-countries-frontend
       npm start
 
 
