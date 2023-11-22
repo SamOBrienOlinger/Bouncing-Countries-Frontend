@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from "/workspace/Bouncing-Countries-Frontend/bouncing-countries-frontend/src/assets/bouncing-countries-logo.png";
 import './App.css';
 
 import Search from "./Search";
@@ -8,9 +8,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>src/App.js</code>
-        </p>
 
         <div>
 

@@ -1,0 +1,20 @@
+{
+  "name": "bouncing-countries-backend",
+  "version": "1.0.0",
+  "description": "Backend for bouncing countries project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend.git"
+  },
+  "author": "Sam O'Brien Olinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend/issues"
+  },
+  "homepage": "https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend#readme"
+}
