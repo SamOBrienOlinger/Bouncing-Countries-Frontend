@@ -2,9 +2,18 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+#globe {
   pointer-events: none;
+  background-image: url('../public/Bouncing-countries-logo.png');
+  background-size: cover;
+  top: 315px;
+  left: 50%;
+  z-index: 1;
+  width: 200px;
+  height: 200px;    
+  border: 10px solid purple;    
+  border-radius: 50%;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +23,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #E14ED2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
