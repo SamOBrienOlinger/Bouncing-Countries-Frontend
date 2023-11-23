@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors'); // Import the cors middleware
 const axios = require('axios');
 
 const app = express();
@@ -6,6 +7,9 @@ const port = process.env.PORT || 3001;
 
 // Middleware to parse JSON requests
 app.use(express.json());
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Define API route for country information
 app.get('/api/country/:countryName', async (req, res) => {

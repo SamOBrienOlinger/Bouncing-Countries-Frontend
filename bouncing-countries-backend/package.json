@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend/issues"
   },
-  "homepage": "https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend#readme"
+  "homepage": "https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend#readme",
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
