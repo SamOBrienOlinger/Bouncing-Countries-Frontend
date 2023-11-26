@@ -1,15 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import LandingPage from './pages/LandingPage';
 import SearchCountry from './pages/SearchCountry';
+// import Navigation from './components/Navigation';
 
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/search" component={SearchCountry} />
-      </Switch>
+      {/* <Switch> */}
+        {/* <Route path="/" exact component={LandingPage} /> */}
+        {/* <Route path="/search" component={SearchCountry} /> */}
+      {/* </Switch> */}
+
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/search" element={<SearchCountry />} />
+      </Routes>
+
     </Router>
   );
 };
