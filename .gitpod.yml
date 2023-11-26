@@ -3,17 +3,17 @@ tasks:
     command: |
       cd bouncing-countries-backend
       npm install
-      cd ../bouncing-countries-frontend
+      cd ../bouncing-countries
       npm install
 
   - name: Start backend
     command: |
-      cd bouncing-countries-backend
+      cd bouncing-countries
       npm start
 
   - name: Start frontend
     command: |
-      cd bouncing-countries-frontend
+      cd bouncing-countries
       npm start
 
 

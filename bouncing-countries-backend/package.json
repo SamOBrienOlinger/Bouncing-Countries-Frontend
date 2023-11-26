@@ -1,5 +1,5 @@
 {
-  "name": "bouncing-countries-backend",
+  "name": "bouncing-countries",
   "version": "1.0.0",
   "description": "Backend for bouncing countries project",
   "main": "server.js",
