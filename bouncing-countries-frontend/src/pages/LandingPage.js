@@ -13,12 +13,9 @@ const LandingPage = () => {
           <p>Go ahead, bounce a country! What country are you looking for?</p>
           <Search />
         </div>
-        <Link
-          to="/searchcountry"
-          className="App-link"
-        >
-          Go to SearchCountry
-        </Link>
+        <Link to="/search" className="App-link">
+  Go to SearchCountry
+</Link>
       </header>
     </div>
   );
