@@ -3,17 +3,25 @@ import axios from 'axios';
 
 const Search = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [country, setCountry] = useState(null);
+  const [countryInfo, setCountryInfo] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleSearch = async () => {
     setLoading(true);
     try {
       const response = await axios.get(`https://restcountries.com/v3.1/name/${searchQuery}`);
-      setCountry(response.data[0]);
+      const countryData = response.data[0];
+      setCountryInfo({
+        capital: countryData?.capital || 'N/A',
+        population: countryData?.population || 'N/A',
+        currencies: countryData?.currencies || {},
+        continents: countryData?.continents || [],
+        languages: countryData?.languages || [],
+        flag: countryData?.flags?.svg || '', // Assuming flag information is available in the API
+      });
     } catch (error) {
       console.error('Error fetching country data:', error);
-      setCountry(null);
+      setCountryInfo(null);
     } finally {
       setLoading(false);
     }
@@ -30,18 +38,18 @@ const Search = () => {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      {country && !loading ? (
+      {countryInfo && !loading ? (
         <div className="country-container">
           <p>
-            <span>Capital:</span> {country.capital || 'N/A'}
+            <span>Capital:</span> {countryInfo.capital || 'N/A'}
           </p>
           <p>
-            <span>Population:</span> {country.population || 'N/A'}
+            <span>Population:</span> {countryInfo.population || 'N/A'}
           </p>
           <p>
             <span>Currency:</span>{' '}
-            {Object.keys(country.currencies || {}).map((currencyCode) => {
-              const currency = country.currencies[currencyCode];
+            {Object.keys(countryInfo.currencies || {}).map((currencyCode) => {
+              const currency = countryInfo.currencies[currencyCode];
               return (
                 <span key={currencyCode}>
                   {currencyCode} ({currency?.name || 'Unknown Name'}){' '}
@@ -51,7 +59,19 @@ const Search = () => {
             }) || 'N/A'}
           </p>
           <p>
-            <span>Continent:</span> {country.continents?.[0] || 'N/A'}
+            <span>Languages:</span>{' '}
+            {countryInfo.languages.length > 0
+              ? countryInfo.languages.join(', ')
+              : 'N/A'}
+          </p>
+          {countryInfo.flag && (
+            <div>
+              <span>Flag:</span>
+              <img src={countryInfo.flag} alt="Flag" width="50" height="30" />
+            </div>
+          )}
+          <p>
+            <span>Continent:</span> {countryInfo.continents?.[0] || 'N/A'}
           </p>
         </div>
       ) : null}
@@ -62,23 +82,23 @@ const Search = () => {
 
 export default Search;
 
+
 // import React, { useState } from 'react';
 // import axios from 'axios';
 
 // const Search = () => {
 //   const [searchQuery, setSearchQuery] = useState('');
-//   const [country, setCountry] = useState({});
+//   const [country, setCountry] = useState(null);
 //   const [loading, setLoading] = useState(false);
 
 //   const handleSearch = async () => {
 //     setLoading(true);
-
 //     try {
 //       const response = await axios.get(`https://restcountries.com/v3.1/name/${searchQuery}`);
-      
 //       setCountry(response.data[0]);
 //     } catch (error) {
-//       console.error('Error fetching country information:', error);
+//       console.error('Error fetching country data:', error);
+//       setCountry(null);
 //     } finally {
 //       setLoading(false);
 //     }
@@ -95,25 +115,32 @@ export default Search;
 //         />
 //         <button onClick={handleSearch}>Search</button>
 //       </div>
-
-//       {country && !loading && (
+//       {country && !loading ? (
 //         <div className="country-container">
 //           <p>
-//             <span>Capital:</span> {country.capital}
+//             <span>Capital:</span> {country.capital || 'N/A'}
 //           </p>
 //           <p>
-//             <span>Population:</span> {country.population}
+//             <span>Population:</span> {country.population || 'N/A'}
 //           </p>
 //           <p>
-//             <span>Currency:</span> {country.currencies.EUR.symbol}
+//             <span>Currency:</span>{' '}
+//             {Object.keys(country.currencies || {}).map((currencyCode) => {
+//               const currency = country.currencies[currencyCode];
+//               return (
+//                 <span key={currencyCode}>
+//                   {currencyCode} ({currency?.name || 'Unknown Name'}){' '}
+//                   {currency?.symbol && `(${currency.symbol})`}
+//                 </span>
+//               );
+//             }) || 'N/A'}
 //           </p>
 //           <p>
-//             <span>Continent:</span> {country.region}
+//             <span>Continent:</span> {country.continents?.[0] || 'N/A'}
 //           </p>
 //         </div>
-//       )}
-
-//       {loading && <div className="loading">Loading...</div>}
+//       ) : null}
+//       {loading && <p className="loading">Loading...</p>}
 //     </div>
 //   );
 // };
