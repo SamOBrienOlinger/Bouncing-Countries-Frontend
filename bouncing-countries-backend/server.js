@@ -6,11 +6,14 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3001;
 
+// Enable CORS for all routes
+app.use(cors());
+
 // Middleware to parse JSON requests
 app.use(express.json());
 
-// Enable CORS for all routes
-app.use(cors());
+
+
 
 app.use(express.static(path.join(__dirname, 'bouncing-countries-frontend', 'public')));
 
@@ -32,7 +35,7 @@ app.get('/api/country/:countryName', async (req, res) => {
 });
 
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'bouncing-countries-frontend', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '../bouncing-countries-frontend', 'public', 'index.html'));
 });
 
 // Start the server
