@@ -27,7 +27,7 @@ app.get('/api/country/:countryName', async (req, res) => {
 
 // Serve the React app on all other routes
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'bouncing-countries-frontend', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'bouncing-countries-frontend', 'public', 'index.html'));
 });
 
 app.listen(port, () => {
