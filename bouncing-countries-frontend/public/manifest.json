@@ -2,7 +2,7 @@
   "short_name": "React App",
   "name": "Create React App Sample",
   "description": "Your app description",
-  "start_url": "./",
+  "start_url": "/bouncing-countries-frontend/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
