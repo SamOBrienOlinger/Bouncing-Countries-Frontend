@@ -12,7 +12,8 @@ app.use(express.json());
 // Enable CORS for all routes
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'bouncing-countries-frontend', 'public')));
+
 
 // Define API route for country information
 app.get('/api/country/:countryName', async (req, res) => {
@@ -30,7 +31,7 @@ app.get('/api/country/:countryName', async (req, res) => {
   }
 });
 
-app.get('*', (req, res) => {
+app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, '../bouncing-countries-frontend/public', 'index.html'));
 });
 
