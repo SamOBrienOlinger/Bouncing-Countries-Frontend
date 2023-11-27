@@ -1,1 +1,1 @@
-web node server.js
+web: node bouncing-countries-backend/server.js
