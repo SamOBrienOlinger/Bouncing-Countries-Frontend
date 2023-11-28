@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/bouncing-countries-logo.png';
+import logo from '../assets/bounce-planet.jpg';
 // import Search from '../components/Search';
 
 const LandingPage = () => {

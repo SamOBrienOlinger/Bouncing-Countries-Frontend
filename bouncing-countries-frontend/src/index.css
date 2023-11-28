@@ -1,9 +1,29 @@
 body {
   align-items: center;
-  background-color: cornsilk;
+  background-color: white;
   display: flex;
   font-family: "Gill Sans Extrabold", sans-serif;
   justify-content: center;
+}
+
+h1 {
+  align-items: center;
+}
+
+#search-intro {
+  align-items: center;
+}
+
+#four-spheres {
+  height: fit-content;
+  width: fit-content;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* body {
