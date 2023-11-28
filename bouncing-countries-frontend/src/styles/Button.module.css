@@ -1,0 +1,32 @@
+.elementor-button-wrapper {
+    display: inline-block;
+  }
+  
+  .elementor-button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 35px 35px 35px 35px;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+    color: var(--e-global-color-a8c2097);
+    background-color: var(--e-global-color-accent);
+  }
+  
+  .elementor-button-link {
+    color: #fff;
+    background-color: #e14ed2;
+    border: 1px solid #020101;
+    padding: 10px 20px;
+  }
+  
+  .elementor-button:hover {
+    color: #fff;
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
+  }
+  
