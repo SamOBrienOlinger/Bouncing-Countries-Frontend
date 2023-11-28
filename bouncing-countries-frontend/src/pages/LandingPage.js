@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/bounce-planet.jpg';
-// import Search from '../components/Search';
+import styles from '../styles/Button.module.css'
 
 const LandingPage = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
         <img src={logo} className="App-logo" alt="logo" />
-        <div>
+        <div id="landing-div">
           <h1>This is Bouncing countries</h1>
 
           <div>
@@ -32,9 +32,18 @@ const LandingPage = () => {
 
           <p>Go ahead, bounce a country! What country are you looking for?</p>
         </div>
-        <Link to="/search" className="App-link">
+        {/* <Link to="/search" className="App-link">
           Go to SearchCountry
-        </Link>
+        </Link> */}
+
+        <div className={styles['elementor-button-wrapper']}>
+          <Link to="/search" className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}>
+            <span className={styles['elementor-button-content-wrapper']}>
+              <span className={styles['elementor-button-text']}>Go to SearchCountry</span>
+            </span>
+          </Link>
+        </div>
+
       </header>
     </div>
   );

@@ -6,9 +6,12 @@ import FourSpheres from '../assets/four-corners-globe.jpg'
 const SearchCountry = () => {
   return (
     <div>
+      
+      <a href="https://bounceinsights.com/">
       <div id="four-spheres">
         <img src={FourSpheres}  alt="four spheres" />
       </div>
+      </a>
       
       <h1>Search Country Page</h1>
 
