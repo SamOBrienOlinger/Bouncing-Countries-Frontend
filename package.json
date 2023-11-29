@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
-    "start-backend": "cd Bouncing-Countries-Frontend/bouncing-countries-backend && node Server.js",
-    "start-frontend": "cd Bouncing-Countries-Frontend/bouncing-countries-frontend && npm start"
+    "start-backend": "cd bouncing-countries-backend && node Server.js",
+    "start-frontend": "cd bouncing-countries-frontend && npm start"
   }
 }
