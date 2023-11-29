@@ -2,7 +2,6 @@ body {
   align-items: center;
   background-color: white;
   display: flex;
-  /* font-family: "Gill Sans Extrabold", sans-serif; */
   font-family: "Poppins", sans-serif;
   justify-content: center;
 }
@@ -11,8 +10,19 @@ h1 {
   align-items: center;
 }
 
-#landing-div {
+.container {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+#globe {
+  margin: auto;
+}
+
+#landing-div {
+  text-align: center;
 }
 
 #search-intro {
