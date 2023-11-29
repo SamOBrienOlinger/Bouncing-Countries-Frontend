@@ -1,49 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/bounce-planet.jpg';
-import styles from '../styles/Button.module.css'
+import styles from '../styles/Button.module.css';
+
 
 const LandingPage = () => {
   return (
     <div>
       <header>
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="container">
+          <img src={logo} id="globe" alt="Bouncing Countries Logo" />
+        </div>
+        
         <div id="landing-div">
           <h1>This is Bouncing countries</h1>
 
           <div>
-            <p>Bounce offers consultancy that delivers the essential answers our clients require immediately</p>
-
-            <p>How?</p>
-
             <div>
-              <p>By placing their interests at the core of real-time data</p>
-              <p>The advantage they need to excel</p>
+              <p>Bounce offers our clients the essential answers they need now in order to create, sustain and enhance their edge </p>
             </div>
+        </div>
 
-            <p>Our agile research platform guarantees that brands around the globe find their edge</p>
+        <div>
+          <h2> How? </h2>
 
-            <h2>Your knowledge-based decisions begin with Bounce</h2>
+        <div>
+          <p>Our Knolwedge becomes your Knolwedge</p>
+          <p> Our agile research platform combines real-time data with our clients' global goals </p>
+        </div>
+        
+        <div>
+          <h3>Your knowledge-based and data-driven decision-making begins with Bounce</h3>
 
-            <p>Our knowledge becomes yours</p>
-
-            <p>Together we set your industry's standard can only try to reach</p>
+            <p> Find the International Information your Organisation needs to Excel</p>
+            <p> Bounce any Country for that Data Now </p>
+        </div>
+          
+        </div>
+          <div className={styles['elementor-button-wrapper']}>
+            <Link to="/search" className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}>
+              <span className={styles['elementor-button-content-wrapper']}>
+                <span className={styles['elementor-button-text']}> Click Here </span>
+              </span>
+            </Link>
           </div>
-
-          <p>Go ahead, bounce a country! What country are you looking for?</p>
         </div>
-        {/* <Link to="/search" className="App-link">
-          Go to SearchCountry
-        </Link> */}
-
-        <div className={styles['elementor-button-wrapper']}>
-          <Link to="/search" className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}>
-            <span className={styles['elementor-button-content-wrapper']}>
-              <span className={styles['elementor-button-text']}>Go to SearchCountry</span>
-            </span>
-          </Link>
-        </div>
-
       </header>
     </div>
   );
