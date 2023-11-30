@@ -7,6 +7,11 @@
     margin-top: 80px;
   }
 
+  .elementor-button-wrapper-third {
+    display: inline-block;
+    margin-top: 80px;
+  }
+
   .elementor-button {
     display: inline-block;
     font-size: 16px;
