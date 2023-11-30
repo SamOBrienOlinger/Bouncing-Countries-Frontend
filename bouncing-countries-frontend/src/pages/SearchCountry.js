@@ -14,35 +14,36 @@ const SearchCountry = () => {
               <img src={FourSpheres} alt="four spheres" />
             </div>
           </a>
+          <div className="search-container">
+            <div id="search-intro">
+              <h1> Gain Global Insights </h1>
+            </div>
 
-          <div id="search-intro">
-            <h1> Gain Global Insights </h1>
-          </div>
-
-          <div className={styles['elementor-button-wrapper']}>
-            <Link
-              to="/search"
-              className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}
-            >
-              <span className={styles['elementor-button-content-wrapper']}>
-                <span className={styles['elementor-button-text']}>
-                  <Search />
+            <div className={styles['elementor-button-wrapper']}>
+              <Link
+                to="/search"
+                className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}
+              >
+                <span className={styles['elementor-button-content-wrapper']}>
+                  <span className={styles['elementor-button-text']}>
+                    <Search />
+                  </span>
                 </span>
-              </span>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className={`${styles['elementor-button-wrapper']} ${styles['elementor-button-wrapper-second']}`}>
-            <Link
-              to="/"
-              className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}
-            >
-              <span className={styles['elementor-button-content-wrapper']}>
-                <span className={styles['elementor-button-text']}>
-                  Bounce Back
+            <div className={`${styles['elementor-button-wrapper']} ${styles['elementor-button-wrapper-second']}`}>
+              <Link
+                to="/"
+                className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}
+              >
+                <span className={styles['elementor-button-content-wrapper']}>
+                  <span className={styles['elementor-button-text']}>
+                    Bounce Back
+                  </span>
                 </span>
-              </span>
-            </Link>
+              </Link>
+            </div>
           </div>
         </header>
       </div>
