@@ -53,12 +53,11 @@ const SearchCountry = () => {
               >
                 <span className={styles['elementor-button-content-wrapper']}>
                   <span className={styles['elementor-button-text']}>
-                    Bounce Back
+                    Bounce Again
                   </span>
                 </span>
               </Link>
             </div>
-          </div>
         </header>
       </div>
     </>
