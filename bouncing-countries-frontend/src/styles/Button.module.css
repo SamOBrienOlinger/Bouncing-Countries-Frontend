@@ -3,12 +3,14 @@
   }
   
   .elementor-button-wrapper-second {
-    display: inline-block;
+    align-items: center;
+    display: flex;
     margin-top: 80px;
   }
 
   .elementor-button-wrapper-third {
-    display: inline-block;
+    align-items: center;
+    display: flex;
     margin-top: 80px;
   }
 

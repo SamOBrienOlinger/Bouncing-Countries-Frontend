@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// Search.js
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Search = () => {
@@ -30,6 +31,17 @@ const Search = () => {
       setLoading(false);
     }
   };
+
+  const resetSearch = () => {
+    setSearchQuery('');
+    setCountryInfo(null);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    // Example: Reset search when component mounts
+    resetSearch();
+  }, []); // Empty dependency array ensures it only runs once on mount
 
   return (
     <div className="search-container">
