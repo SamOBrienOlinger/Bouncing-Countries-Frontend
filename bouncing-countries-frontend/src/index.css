@@ -19,7 +19,25 @@ h1 {
 
 #globe {
   margin: auto;
+  animation: bounceAnimation 2s; /* Apply animation */
 }
+
+@keyframes bounceAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust distance and timing of bounce */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* #globe {
+  margin: auto;
+} */
 
 #landing-div {
   text-align: center;
@@ -27,11 +45,16 @@ h1 {
 
 #search-intro {
   align-items: center;
+  text-align: center;
 }
 
 #four-spheres {
   height: fit-content;
   width: fit-content;
+}
+
+#idsearch-text {
+  color: purple
 }
 
 .search-container {

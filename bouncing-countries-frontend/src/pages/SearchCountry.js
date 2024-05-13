@@ -16,7 +16,9 @@ const SearchCountry = () => {
           </a>
           <div className="search-container">
             <div id="search-intro">
-              <h1> Gain Global Insights </h1>
+              <h1> Gain Global Insights Now </h1>
+
+              <p> Insert Country Below </p>
             </div>
 
             <div className={styles['elementor-button-wrapper']}>
@@ -24,7 +26,7 @@ const SearchCountry = () => {
                 to="/search"
                 className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}
               >
-                <span className={styles['elementor-button-content-wrapper']}>
+                <span id="search-text" className={styles['elementor-button-content-wrapper']}>
                   <span className={styles['elementor-button-text']}>
                     <Search />
                   </span>
@@ -39,14 +41,14 @@ const SearchCountry = () => {
               >
                 <span className={styles['elementor-button-content-wrapper']}>
                   <span className={styles['elementor-button-text']}>
-                    Bounce Back
+                    Bounce Back to the Homepage
                   </span>
                 </span>
               </Link>
             </div>
           </div>
 
-          <div className={`${styles['elementor-button-wrapper']} ${styles['elementor-button-wrapper-third']}`}>
+          {/* <div className={`${styles['elementor-button-wrapper']} ${styles['elementor-button-wrapper-third']}`}>
               <Link
                 to="/search"
                 className={`${styles['elementor-button']} ${styles['elementor-button-link']}`}
@@ -57,7 +59,7 @@ const SearchCountry = () => {
                   </span>
                 </span>
               </Link>
-            </div>
+            </div> */}
         </header>
       </div>
     </>
