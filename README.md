@@ -1,79 +1,70 @@
-# Bouncing-Countries-Frontend
+# Bouncing Countries
 
+A country-information prototype combining a React interface with an Express service.
 
+**React · Node.js · Express**
 
+[Getting started](#getting-started) · [Repository guide](#repository-guide) · [Checks](#checks-and-review) · [Credits](#credits-and-reuse)
 
-### Technologies used
+## What you can explore
 
-  - React
+- Country-name search and a landing page.
+- Capital, population, currency, language and flag information.
+- An Express country lookup route using REST Countries.
 
-# Getting Started with Create React App
+> **Project notes:** The search component currently calls REST Countries directly. The Express country route is a separate implementation; its public/index.html fallback is not a production React build.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting started
 
-## Available Scripts
+Requires Node.js and npm. The frontend and backend are separate packages.
 
-In the project directory, you can run:
+```bash
+git clone https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend.git
+cd Bouncing-Countries-Frontend
+```
 
-### `npm start`
+Install all three package manifests, then start the combined development command:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+npm --prefix bouncing-countries-backend install
+npm --prefix bouncing-countries-frontend install
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The React development server normally uses port 3000 and Express uses port 3001. The current search component calls REST Countries directly.
 
-### `npm test`
+## Repository guide
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Path | Purpose |
+| --- | --- |
+| [bouncing-countries-backend/package.json](bouncing-countries-backend/package.json) | Package dependencies and available commands |
+| [bouncing-countries-frontend/package.json](bouncing-countries-frontend/package.json) | Package dependencies and available commands |
+| [package.json](package.json) | Package dependencies and available commands |
 
-### `npm run build`
+## Checks and review
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use Node.js and npm for the package commands below. Install the package dependencies first when the command uses a local build or test tool.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Command | Purpose |
+| --- | --- |
+| `npm --prefix bouncing-countries-frontend run build` | Create the configured application build |
+| `npm --prefix bouncing-countries-frontend test -- --watchAll=false` | Run the existing test suite |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For a manual review, follow the main user journey, check keyboard navigation and narrow-screen layouts, and inspect the browser console for missing assets or failed requests.
 
-### `npm run eject`
+Generate fresh results from the revision you are working on; historical test reports describe earlier runs.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Hosting entry points are recorded in [Procfile](Procfile). Configure the runtime, database, allowed origins and static/media handling for the chosen host. Historical deployment records may describe services that are no longer available.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Credits and reuse
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+No repository-level licence file is present in this snapshot. This README does not grant additional reuse permissions. Check with the relevant rights holders before reusing code, written content or assets.
 
-## Learn More
+## Support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Repository maintained in [Sam O’Brien-Olinger’s GitHub account](https://github.com/SamOBrienOlinger). For a problem or suggested improvement, [open an issue](https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend/issues) with the affected page or command, steps to reproduce, and expected behaviour.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Back to top](#bouncing-countries)
