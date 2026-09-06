@@ -16,7 +16,7 @@ A country-information prototype combining a React interface with an Express serv
 
 ## Getting started
 
-Requires Node.js and npm. The frontend and backend are separate packages.
+Requires Git, Node.js and npm. The frontend and backend are separate packages.
 
 ```bash
 git clone https://github.com/SamOBrienOlinger/Bouncing-Countries-Frontend.git
