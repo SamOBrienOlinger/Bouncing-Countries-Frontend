@@ -4,7 +4,7 @@ A country-information prototype combining a React interface with an Express serv
 
 **React · Node.js · Express**
 
-[Getting started](#getting-started) · [Repository guide](#repository-guide) · [Checks](#checks-and-review) · [Credits](#credits-and-reuse)
+[Getting started](#getting-started) · [Data model](#entity-relationship-diagram) · [Repository guide](#repository-guide) · [Checks](#checks-and-review) · [Credits](#credits-and-reuse)
 
 ## What you can explore
 
@@ -13,6 +13,32 @@ A country-information prototype combining a React interface with an Express serv
 - An Express country lookup route using REST Countries.
 
 > **Project notes:** The search component currently calls REST Countries directly. The Express country route is a separate implementation; its public/index.html fallback is not a production React build.
+
+## Entity relationship diagram
+
+The React search calls REST Countries directly and displays the first matching country. It flattens capital and language lists for display and keeps currencies as entries keyed by currency code. The result is held in React state. [Search component](bouncing-countries-frontend/src/components/Search.js)
+
+```mermaid
+erDiagram
+    accTitle: Bouncing Countries search result model
+    accDescr: A lookup can return one displayed country result. The result includes zero or more currency entries keyed by code.
+    Lookup ||--o| "Country Result" : displays
+    "Country Result" ||--o{ "Currency Entry" : lists
+
+    Lookup {
+        string searchQuery
+    }
+    "Country Result" {
+        string capital
+        string languages
+        url flag
+    }
+    "Currency Entry" {
+        string code
+        string name
+        string symbol
+    }
+```
 
 ## Getting started
 
