@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 302 582" width="302" height="582" role="img" aria-labelledby="erd-title erd-desc"><title id="erd-title">Bouncing Countries search result model</title><desc id="erd-desc">A lookup can return one displayed country result. The result includes zero or more currency entries keyed by code.</desc><metadata data-format="mermaid">erDiagram
+    accTitle: Bouncing Countries search result model
+    accDescr: A lookup can return one displayed country result. The result includes zero or more currency entries keyed by code.
+    Lookup ||--o| "Country Result" : displays
+    "Country Result" ||--o{ "Currency Entry" : lists
+
+    Lookup {
+        string searchQuery
+    }
+    "Country Result" {
+        string capital
+        string languages
+        url flag
+    }
+    "Currency Entry" {
+        string code
+        string name
+        string symbol
+    }</metadata><style>:root {
+  --panel:#f7fafc; --border:#c7d8e4; --heading:#14354b; --accent:#128276;
+  --card:#174b62; --card-title:#fff; --text:#183448; --muted:#486278;
+  --row:#fff; --stripe:#edf5f9; --rule:#9ab7c9; --line:#486980;
+  --label-bg:#e2f3ee; --label-text:#195649;
+}
+@media (prefers-color-scheme:dark) {
+  :root {
+    --panel:#101c2a; --border:#3c566c; --heading:#eaf5fe; --accent:#53c7b2;
+    --card:#25526b; --card-title:#fff; --text:#e0edf6; --muted:#b4cadd;
+    --row:#192b3c; --stripe:#1e3448; --rule:#52738a; --line:#a3becf;
+    --label-bg:#1b3c41; --label-text:#c3f4e8;
+  }
+}
+text { font-family:Arial, Helvetica, sans-serif; }
+.panel { fill:var(--panel); stroke:var(--border); }
+.accent { fill:var(--accent); }
+.graphic-title { fill:var(--heading); font-weight:700; font-size:16px; }
+.entityBox { fill:var(--card); stroke:var(--rule); }
+.entity-heading { fill:var(--card-title); font-size:16px; font-weight:700; text-anchor:middle; dominant-baseline:middle; }
+.attributeBoxOdd { fill:var(--row); stroke:var(--rule); stroke-width:.8; }
+.attributeBoxEven { fill:var(--stripe); stroke:var(--rule); stroke-width:.8; }
+.attribute-text { fill:var(--text); font-size:13.6px; dominant-baseline:middle; }
+.attribute-type, .attribute-comment { fill:var(--muted); }
+.attribute-key { fill:var(--label-text); font-weight:700; }
+.relationshipLine { fill:none; stroke:var(--line); stroke-width:1.25; }
+.relationshipLabel { fill:var(--label-text); font-size:14px; font-weight:600; text-anchor:middle; dominant-baseline:middle; }
+.relationshipLabelBox { fill:var(--label-bg); }
+marker path { stroke:var(--line); fill:none; }
+marker circle { stroke:var(--line); fill:var(--panel); }</style><defs><marker orient="auto" markerHeight="18" markerWidth="18" refY="9" refX="0" id="ONLY_ONE_START" markerUnits="userSpaceOnUse"><path d="M9,0 L9,18 M15,0 L15,18" fill="none" stroke="gray"/></marker><marker orient="auto" markerHeight="18" markerWidth="30" refY="9" refX="30" id="ZERO_OR_ONE_END" markerUnits="userSpaceOnUse"><circle r="6" cy="9" cx="9" fill="white" stroke="gray"/><path d="M21,0 L21,18" fill="none" stroke="gray"/></marker><marker orient="auto" markerHeight="36" markerWidth="57" refY="18" refX="39" id="ZERO_OR_MORE_END" markerUnits="userSpaceOnUse"><circle r="6" cy="18" cx="9" fill="white" stroke="gray"/><path d="M21,18 Q39,0 57,18 Q39,36 21,18" fill="none" stroke="gray"/></marker></defs><rect class="panel" x=".5" y=".5" width="301" height="581" rx="14"/><rect class="accent" x="22" y="18" width="26" height="3" rx="1.5"/><text class="graphic-title" x="22" y="40" aria-hidden="true"><tspan x="22" y="40">Bouncing Countries search result</tspan><tspan x="22" y="61">model</tspan></text><g transform="translate(61.65 70)"><path marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_ONE_END)" d="M89.352,74.333L89.352,82.667C89.352,91,89.352,107.667,89.352,124.333C89.352,141,89.352,157.667,89.352,166L89.352,174.333" class="er relationshipLine"/><path marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" d="M89.352,280L89.352,288.333C89.352,296.667,89.352,313.333,89.352,330C89.352,346.667,89.352,363.333,89.352,371.667L89.352,380" class="er relationshipLine"/><g transform="translate(23.04888153076172,20 )"><rect height="54.33333333333333" width="132.6053670247396" y="0" x="0" class="er entityBox"/><text transform="translate(66.3026835123698,14.333333333333332)" y="0" x="0" class="entity-heading">Lookup</text><rect height="25.666666666666664" width="43.91666666666667" y="28.666666666666664" x="0" class="er attributeBoxOdd"/><text transform="translate(5.333333333333333,41.5)" y="0" x="0" class="attribute-text attribute-type">string</text><rect height="25.666666666666664" width="88.68870035807292" y="28.666666666666664" x="43.91666666666667" class="er attributeBoxOdd"/><text transform="translate(49.25000000000001,41.5)" y="0" x="0" class="attribute-text">searchQuery</text></g><g transform="translate(20.1640625,174.33333206176758 )"><rect height="105.66666666666666" width="138.375" y="0" x="0" class="er entityBox"/><text transform="translate(69.1875,14.333333333333332)" y="0" x="0" class="entity-heading">Country Result</text><rect height="25.666666666666664" width="54.341766357421875" y="28.666666666666664" x="0" class="er attributeBoxOdd"/><text transform="translate(5.333333333333333,41.5)" y="0" x="0" class="attribute-text attribute-type">string</text><rect height="25.666666666666664" width="84.03323364257812" y="28.666666666666664" x="54.341766357421875" class="er attributeBoxOdd"/><text transform="translate(59.67509969075521,41.5)" y="0" x="0" class="attribute-text">capital</text><rect height="25.666666666666664" width="54.341766357421875" y="54.33333333333333" x="0" class="er attributeBoxEven"/><text transform="translate(5.333333333333333,67.16666666666666)" y="0" x="0" class="attribute-text attribute-type">string</text><rect height="25.666666666666664" width="84.03323364257812" y="54.33333333333333" x="54.341766357421875" class="er attributeBoxEven"/><text transform="translate(59.67509969075521,67.16666666666666)" y="0" x="0" class="attribute-text">languages</text><rect height="25.666666666666664" width="54.341766357421875" y="80" x="0" class="er attributeBoxOdd"/><text transform="translate(5.333333333333333,92.83333333333333)" y="0" x="0" class="attribute-text attribute-type">url</text><rect height="25.666666666666664" width="84.03323364257812" y="80" x="54.341766357421875" class="er attributeBoxOdd"/><text transform="translate(59.67509969075521,92.83333333333333)" y="0" x="0" class="attribute-text">flag</text></g><g transform="translate(20,379.99999618530273 )"><rect height="105.66666666666666" width="138.703125" y="0" x="0" class="er entityBox"/><text transform="translate(69.3515625,14.333333333333332)" y="0" x="0" class="entity-heading">Currency Entry</text><rect height="25.666666666666664" width="64.4453125" y="28.666666666666664" x="0" class="er attributeBoxOdd"/><text transform="translate(5.333333333333333,41.5)" y="0" x="0" class="attribute-text attribute-type">string</text><rect height="25.666666666666664" width="74.2578125" y="28.666666666666664" x="64.4453125" class="er attributeBoxOdd"/><text transform="translate(69.77864583333333,41.5)" y="0" x="0" class="attribute-text">code</text><rect height="25.666666666666664" width="64.4453125" y="54.33333333333333" x="0" class="er attributeBoxEven"/><text transform="translate(5.333333333333333,67.16666666666666)" y="0" x="0" class="attribute-text attribute-type">string</text><rect height="25.666666666666664" width="74.2578125" y="54.33333333333333" x="64.4453125" class="er attributeBoxEven"/><text transform="translate(69.77864583333333,67.16666666666666)" y="0" x="0" class="attribute-text">name</text><rect height="25.666666666666664" width="64.4453125" y="80" x="0" class="er attributeBoxOdd"/><text transform="translate(5.333333333333333,92.83333333333333)" y="0" x="0" class="attribute-text attribute-type">string</text><rect height="25.666666666666664" width="74.2578125" y="80" x="64.4453125" class="er attributeBoxOdd"/><text transform="translate(69.77864583333333,92.83333333333333)" y="0" x="0" class="attribute-text">symbol</text></g><rect height="18" width="67.81" y="115.33299255371094" x="55.45" class="er relationshipLabelBox" rx="6"/><text y="124.33299255371094" x="89.35199737548828" class="er relationshipLabel">displays</text><rect height="17.015625" width="37.56" y="321.4921875" x="70.57" class="er relationshipLabelBox" rx="6"/><text y="330" x="89.35199737548828" class="er relationshipLabel">lists</text></g></svg>
